@@ -8,16 +8,16 @@ O foco é promover autogestão e produtividade, permitindo que o usuário visual
 _____________________________________________________________________________________________________________________________________________________________            
 <h2>📝 Descrição do Projeto</h2>
 
-💻 Tecnologias Utilizadas
+<h2>💻 Tecnologias Utilizadas</h2>
 
-⚙️ Limitações do Projeto
+<h2>⚙️ Limitações do Projeto</h2>
 
-🧱 Entidades do Projeto
+<h2>🧱 Entidades do Projeto</h2>
 
-🚀 Rotas da API
+<h2>🚀 Rotas da API</h2>
 
-⚠️ Exemplos de Erros HTTP
+<h2>⚠️ Exemplos de Erros HTTP</h2>
 
-🧰 Como Executar o Projeto Localmente
+<h2>🧰 Como Executar o Projeto Localmente</h2>
 
-🧠 Outros Conteúdos Relevantes
+<h2>🧠 Outros Conteúdos Relevantes</h2>
