@@ -6,7 +6,7 @@ O foco é promover autogestão e produtividade, permitindo que o usuário visual
 
 👥 Alunas: Agnes Pinheiro Pereira e Maine Calabrezi de Souza
 _____________________________________________________________________________________________________________________________________________________________            
-<h2>📝 Descrição do Projeto</h2>[
+<h2>📝 Descrição do Projeto</h2>
 
 💻 Tecnologias Utilizadas
 
