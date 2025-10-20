@@ -7,10 +7,17 @@ O foco é promover autogestão e produtividade, permitindo que o usuário visual
 👥 Alunas: Agnes Pinheiro Pereira e Maine Calabrezi de Souza
 _____________________________________________________________________________________________________________________________________________________________            
 📝 Descrição do Projeto
+
 💻 Tecnologias Utilizadas
+
 ⚙️ Limitações do Projeto
+
 🧱 Entidades do Projeto
+
 🚀 Rotas da API
+
 ⚠️ Exemplos de Erros HTTP
+
 🧰 Como Executar o Projeto Localmente
+
 🧠 Outros Conteúdos Relevantes
