@@ -20,48 +20,17 @@ ________________________________________________________________________________
 
 <h2>🧱 Entidades do Projeto</h2>
 <h4>1. Usuário</h4>
-<p><strong>Campos:</strong></p>
-<p>id - int - Identificador único do usuário</p>
-<p>nome - string - Nome completo do usuário</p>
-<p>email - string - E-mail usado para login</p>
-<p>senha - string - Senha criptografada</p>
-<p>criado_em - datetime - Data de criação do cadastro</p>
-
-<p><strong>Relacionamentos:</strong></p>
-<p>Um usuário possui vários hábitos (1:N com Hábito)</p>
-<p>Um usuário possui várias tarefas (1:N com Tarefa)</p>
+<p>Campos: id, nome, email, senha, criado_em</p>
+<p>Relacionamentos: um usuário possui vários hábitos e tarefas (1:N)</p>
 
 <h4>2. Hábito</h4>
-p><strong>Campos:</strong></p>
-<p>id - int - Identificador único do hábito</p>
-<p>titulo - string - Nome ou título do hábito</p>
-<p>descricao - text - Descrição detalhada</p>
-<p>categoria - string - Categoria do hábito (ex.: saúde, estudo, lazer)</p>
-<p>frequencia - string - Frequência esperada (diário, semanal)</p>
-<p>progresso - float - Percentual de conclusão</p>
-<p>criado_em - datetime - Data de criação</p>
-<p>atualizado_em - datetime - Data da última atualização</p>
-<p>usuario_id - int - ID do usuário criador</p>
-
-<p><strong>Relacionamentos:</strong></p>
-<p>Um hábito pode ter várias tarefas (1:N com Tarefa)</p>
-<p>Cada hábito pertence a um usuário (N:1 com Usuário)</p>
-<p><strong>Cache:</strong> as requisições GET para listar hábitos utilizam cache configurável.</p>
+<p>Campos: id, titulo, descricao, categoria, frequencia, progresso, criado_em, atualizado_em, usuario_id</p>
+<p>Relacionamentos: um hábito pode ter várias tarefas; cada hábito pertence a um usuário.</p>
+<p>Cache: as requisições GET para listar hábitos utilizam cache configurável.</p>
 
 <h4>3. Tarefa</h4>
-<p><strong>Campos:</strong></p>
-<p>id - int - Identificador único da tarefa</p>
-<p>titulo - string - Título da tarefa</p>
-<p>descricao - text - Descrição detalhada</p>
-<p>data - date - Data planejada para execução</p>
-<p>status - string - pendente / concluída</p>
-<p>prioridade - string - baixa / média / alta</p>
-<p>habito_id - int - ID do hábito associado</p>
-<p>usuario_id - int - ID do usuário dono da tarefa</p>
-
-<p><strong>Relacionamentos:</strong></p>
-<p>Cada tarefa pertence a um hábito (N:1)</p>
-<p>Cada tarefa pertence a um usuário (N:1)</p>
+<p>Campos: id, titulo, descricao, data, status, prioridade, habito_id, usuario_id</p>
+<p>Relacionamentos: cada tarefa pertence a um hábito e a um usuário.</p>
 
 
 <h2>🚀 Rotas da API</h2>
