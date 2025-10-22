@@ -5,8 +5,17 @@
 _____________________________________________________________________________________________________________________________________________________________            
 <h2>📝 Descrição do Problema</h2>
 <p>Muitas pessoas encontram dificuldade em manter hábitos e organizar tarefas diárias, perdendo controle sobre frequência e progresso. O Florescer oferece uma solução prática e estruturada para gerenciar hábitos, acompanhar tarefas e medir resultados, promovendo produtividade e disciplina pessoal.</p>
+
 <h2>💻 Tecnologias Utilizadas</h2>
 
+<h2>💡 Principais Funcionalidades da API</h2>
+<ul>
+  <li><strong>Cadastro e autenticação de usuários:</strong> criar conta e login com autenticação segura. Armazenar dados como nome, e-mail e senha criptografada.</li>
+  <li><strong>Gerenciamento de hábitos:</strong> criar, listar, editar e excluir hábitos; associar hábitos a categorias; marcar hábitos como concluídos; cache configurável para GET de hábitos.</li>
+  <li><strong>Gerenciamento de tarefas:</strong> criar tarefas diárias vinculadas a hábitos, definir prioridade, data e status.</li>
+  <li><strong>Acompanhamento de progresso:</strong> visualizar percentual de conclusão de hábitos; consultar histórico por período.</li>
+  <li><strong>Filtros e ordenação:</strong> listar hábitos com filtros por categoria, status ou período; paginação e ordenação dos resultados.</li>
+</ul>
 <h2>⚙️ Limitações do Projeto</h2>
 
 <h2>🧱 Entidades do Projeto</h2>
