@@ -4,7 +4,7 @@
 👥 Alunas: Agnes Pinheiro Pereira e Maine Calabrezi de Souza
 _____________________________________________________________________________________________________________________________________________________________            
 <h2>📝 Descrição do Problema</h2>
-
+<p>Muitas pessoas encontram dificuldade em manter hábitos e organizar tarefas diárias, perdendo controle sobre frequência e progresso. O Florescer oferece uma solução prática e estruturada para gerenciar hábitos, acompanhar tarefas e medir resultados, promovendo produtividade e disciplina pessoal.</p>
 <h2>💻 Tecnologias Utilizadas</h2>
 
 <h2>⚙️ Limitações do Projeto</h2>
