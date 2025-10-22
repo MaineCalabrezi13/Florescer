@@ -19,16 +19,16 @@ ________________________________________________________________________________
 <h2>⚙️ Limitações do Projeto</h2>
 
 <h2>🧱 Entidades do Projeto</h2>
-<h1>1. Usuário</h1>
+<h4>1. Usuário</h4>
 <p>Campos: id, nome, email, senha, criado_em</p>
 <p>Relacionamentos: um usuário possui vários hábitos e tarefas (1:N)</p>
 
-<h1>2. Hábito</h1>
+<h4>2. Hábito</h4>
 <p>Campos: id, titulo, descricao, categoria, frequencia, progresso, criado_em, atualizado_em, usuario_id</p>
 <p>Relacionamentos: um hábito pode ter várias tarefas; cada hábito pertence a um usuário.</p>
 <p>Cache: as requisições GET para listar hábitos utilizam cache configurável.</p>
 
-<h1>3. Tarefa</h1>
+<h4>3. Tarefa</h4>
 <p>Campos: id, titulo, descricao, data, status, prioridade, habito_id, usuario_id</p>
 <p>Relacionamentos: cada tarefa pertence a um hábito e a um usuário.</p>
 
