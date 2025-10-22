@@ -1,6 +1,5 @@
 # 🌱 Florescer – Sistema de Hábitos e Organização Pessoal
-<p>O Florescer tem como objetivo auxiliar usuários na organização de hábitos diários e pessoais, permitindo o registro, acompanhamento e análise de rotinas.
-O sistema possibilita <br>O foco é promover autogestão e produtividade, permitindo que o usuário visualize seu desempenho e se mantenha motivado a manter bons hábitos.</p>
+<p>O Florescer é uma API RESTful voltada para auxiliar os usuários na organização de hábitos e tarefas pessoais. O sistema permite o cadastro, acompanhamento e análise de hábitos, possibilitando que o usuário visualize sua evolução e mantenha a motivação para alcançar seus objetivos diários. O projeto tem como foco produtividade e autogestão, oferecendo funcionalidades como criação de hábitos, registro de tarefas, acompanhamento de progresso, filtros, ordenação e cache para otimização de desempenho..</p>
 
 👥 Alunas: Agnes Pinheiro Pereira e Maine Calabrezi de Souza
 _____________________________________________________________________________________________________________________________________________________________            
