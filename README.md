@@ -34,6 +34,7 @@ ________________________________________________________________________________
 
 
 <h2>🚀 Rotas da API</h2>
+<h4>👤 Usuário</h4>
 <table>
   <tr><th>Verbo</th><th>Rota</th><th>Descrição</th><th>Código de Retorno</th></tr>
   <tr><td>POST</td><td>/usuarios</td><td>Cadastra um novo usuário</td><td>201 Created</td></tr>
@@ -41,6 +42,26 @@ ________________________________________________________________________________
   <tr><td>GET</td><td>/usuarios/{id}</td><td>Retorna os dados de um usuário específico</td><td>200 OK / 404 Not Found</td></tr>
   <tr><td>PUT</td><td>/usuarios/{id}</td><td>Atualiza os dados de um usuário</td><td>200 OK / 404 Not Found</td></tr>
   <tr><td>DELETE</td><td>/usuarios/{id}</td><td>Exclui um usuário</td><td>204 No Content / 404 Not Found</td></tr>
+</table>
+
+<h4>🌿 Hábito</h4>
+<table>
+  <tr><th>Verbo</th><th>Rota</th><th>Descrição</th><th>Código de Retorno</th></tr>
+  <tr><td>POST</td><td>/habitos</td><td>Cria um novo hábito vinculado a um usuário</td><td>201 Created</td></tr>
+  <tr><td>GET</td><td>/habitos</td><td>Lista todos os hábitos cadastrados</td><td>200 OK</td></tr>
+  <tr><td>GET</td><td>/habitos/{id}</td><td>Retorna um hábito específico</td><td>200 OK / 404 Not Found</td></tr>
+  <tr><td>PUT</td><td>/habitos/{id}</td><td>Atualiza informações de um hábito</td><td>200 OK / 404 Not Found</td></tr>
+  <tr><td>DELETE</td><td>/habitos/{id}</td><td>Exclui um hábito</td><td>204 No Content / 404 Not Found</td></tr>
+</table>
+
+<h4>✅ Tarefa</h4>
+<table>
+  <tr><th>Verbo</th><th>Rota</th><th>Descrição</th><th>Código de Retorno</th></tr>
+  <tr><td>POST</td><td>/tarefas</td><td>Cria uma nova tarefa associada a um hábito</td><td>201 Created</td></tr>
+  <tr><td>GET</td><td>/tarefas</td><td>Lista todas as tarefas registradas</td><td>200 OK</td></tr>
+  <tr><td>GET</td><td>/tarefas/{id}</td><td>Retorna uma tarefa específica</td><td>200 OK / 404 Not Found</td></tr>
+  <tr><td>PUT</td><td>/tarefas/{id}</td><td>Atualiza informações de uma tarefa</td><td>200 OK / 404 Not Found</td></tr>
+  <tr><td>DELETE</td><td>/tarefas/{id}</td><td>Exclui uma tarefa</td><td>204 No Content / 404 Not Found</td></tr>
 </table>
 <h2>⚠️ Exemplos de Erros HTTP</h2>
 
