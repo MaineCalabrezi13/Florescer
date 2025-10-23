@@ -30,18 +30,51 @@ ________________________________________________________________________________
 <h2>⚙️ Limitações do Projeto</h2>
 
 <h2>🧱 Entidades do Projeto</h2>
-<h4>1. Usuário</h4>
-<p>Campos: id, nome, email, senha, criado_em</p>
-<p>Relacionamentos: um usuário possui vários hábitos e tarefas (1:N)</p>
+<h3>👤 Usuário</h3>
+<table>
+  <tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr>
+  <tr><td>id</td><td>int</td><td>Identificador único do usuário</td></tr>
+  <tr><td>nome</td><td>string</td><td>Nome completo do usuário</td></tr>
+  <tr><td>email</td><td>string</td><td>E-mail usado para login</td></tr>
+  <tr><td>senha</td><td>string</td><td>Senha criptografada</td></tr>
+  <tr><td>criado_em</td><td>datetime</td><td>Data de criação do cadastro</td></tr>
+</table>
 
-<h4>2. Hábito</h4>
-<p>Campos: id, titulo, descricao, categoria, frequencia, progresso, criado_em, atualizado_em, usuario_id</p>
-<p>Relacionamentos: um hábito pode ter várias tarefas; cada hábito pertence a um usuário.</p>
-<p>Cache: as requisições GET para listar hábitos utilizam cache configurável.</p>
+<p><strong>Relacionamentos:</strong><br>
+Um usuário possui vários hábitos (1:N com Hábito)<br>
+Um usuário possui várias tarefas (1:N com Tarefa)</p>
 
-<h4>3. Tarefa</h4>
-<p>Campos: id, titulo, descricao, data, status, prioridade, habito_id, usuario_id</p>
-<p>Relacionamentos: cada tarefa pertence a um hábito e a um usuário.</p>
+<hr>
+
+<h3>🌿 Hábito</h3>
+<table>
+  <tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr>
+  <tr><td>id</td><td>int</td><td>Identificador único do hábito</td></tr>
+  <tr><td>usuario_id</td><td>int</td><td>ID do usuário responsável</td></tr>
+  <tr><td>nome</td><td>string</td><td>Nome do hábito</td></tr>
+  <tr><td>descricao</td><td>string</td><td>Breve descrição do hábito</td></tr>
+  <tr><td>frequencia</td><td>string</td><td>Periodicidade (diário, semanal, etc.)</td></tr>
+</table>
+
+<p><strong>Relacionamentos:</strong><br>
+Um hábito pertence a um usuário (N:1 com Usuário)<br>
+Um hábito possui várias tarefas (1:N com Tarefa)</p>
+
+<hr>
+
+<h3>✅ Tarefa</h3>
+<table>
+  <tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr>
+  <tr><td>id</td><td>int</td><td>Identificador único da tarefa</td></tr>
+  <tr><td>habito_id</td><td>int</td><td>ID do hábito vinculado</td></tr>
+  <tr><td>titulo</td><td>string</td><td>Título da tarefa</td></tr>
+  <tr><td>descricao</td><td>string</td><td>Descrição detalhada</td></tr>
+  <tr><td>data</td><td>date</td><td>Data de execução da tarefa</td></tr>
+  <tr><td>status</td><td>boolean</td><td>Define se a tarefa foi concluída</td></tr>
+</table>
+
+<p><strong>Relacionamentos:</strong><br>
+Uma tarefa pertence a um hábito (N:1 com Hábito)</p>
 
 
 <h2>🚀 Rotas da API</h2>
