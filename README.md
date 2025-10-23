@@ -7,6 +7,13 @@ ________________________________________________________________________________
 <p>Muitas pessoas encontram dificuldade em manter hábitos e organizar tarefas diárias, perdendo controle sobre frequência e progresso. O Florescer oferece uma solução prática e estruturada para gerenciar hábitos, acompanhar tarefas e medir resultados, promovendo produtividade e disciplina pessoal.</p>
 
 <h2>💻 Tecnologias Utilizadas</h2>
+<ul>
+  <li>Java 17</li>
+  <li>Spring Boot</li>
+  <li>H2</li>
+  <li>Insomnia (testes de API)</li>
+  <li>GitHub (controle de versão)</li>
+</ul>
 
 <h2>💡 Principais Funcionalidades da API</h2>
 <ul>
