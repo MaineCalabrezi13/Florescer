@@ -34,7 +34,14 @@ ________________________________________________________________________________
 
 
 <h2>🚀 Rotas da API</h2>
-
+<table>
+  <tr><th>Verbo</th><th>Rota</th><th>Descrição</th><th>Código de Retorno</th></tr>
+  <tr><td>POST</td><td>/usuarios</td><td>Cadastra um novo usuário</td><td>201 Created</td></tr>
+  <tr><td>GET</td><td>/usuarios</td><td>Lista todos os usuários</td><td>200 OK</td></tr>
+  <tr><td>GET</td><td>/usuarios/{id}</td><td>Retorna os dados de um usuário específico</td><td>200 OK / 404 Not Found</td></tr>
+  <tr><td>PUT</td><td>/usuarios/{id}</td><td>Atualiza os dados de um usuário</td><td>200 OK / 404 Not Found</td></tr>
+  <tr><td>DELETE</td><td>/usuarios/{id}</td><td>Exclui um usuário</td><td>204 No Content / 404 Not Found</td></tr>
+</table>
 <h2>⚠️ Exemplos de Erros HTTP</h2>
 
 <h2>🧰 Como Executar o Projeto Localmente</h2>
