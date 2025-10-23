@@ -16,6 +16,17 @@ ________________________________________________________________________________
   <li><strong>Acompanhamento de progresso:</strong> visualizar percentual de conclusão de hábitos; consultar histórico por período.</li>
   <li><strong>Filtros e ordenação:</strong> listar hábitos com filtros por categoria, status ou período; paginação e ordenação dos resultados.</li>
 </ul>
+
+<h3>📊 Mapeamento das Funcionalidades</h3>
+<table>
+  <tr><th>Funcionalidade</th><th>Descrição</th><th>Entidades Envolvidas</th></tr>
+  <tr><td>Cadastro de Usuário</td><td>Criação de um novo usuário na aplicação</td><td>Usuário</td></tr>
+  <tr><td>Criação de Hábito</td><td>Permite ao usuário registrar um novo hábito</td><td>Usuário, Hábito</td></tr>
+  <tr><td>Registro de Tarefa</td><td>Criação de tarefas vinculadas a um hábito</td><td>Hábito, Tarefa</td></tr>
+  <tr><td>Listagem e Acompanhamento</td><td>Permite visualizar todos os hábitos e tarefas criadas</td><td>Hábito, Tarefa</td></tr>
+  <tr><td>Edição e Exclusão</td><td>Atualiza ou remove hábitos e tarefas</td><td>Todas</td></tr>
+</table>
+
 <h2>⚙️ Limitações do Projeto</h2>
 
 <h2>🧱 Entidades do Projeto</h2>
