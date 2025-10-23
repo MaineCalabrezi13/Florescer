@@ -35,7 +35,7 @@ ________________________________________________________________________________
 </table>
 
 <h2>⚙️ Limitações do Projeto</h2>
-
+<p>O sistema é focado apenas em funcionalidades básicas de cadastro e acompanhamento de hábitos e tarefas. Não possui, nesta versão, autenticação de usuários com token JWT nem integração com frontend</p>
 <h2>🧱 Entidades do Projeto</h2>
 <h3>👤 Usuário</h3>
 <table>
