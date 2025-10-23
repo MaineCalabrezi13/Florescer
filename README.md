@@ -114,8 +114,41 @@ Uma tarefa pertence a um hábito (N:1 com Hábito)</p>
   <tr><td>PUT</td><td>/tarefas/{id}</td><td>Atualiza informações de uma tarefa</td><td>200 OK / 404 Not Found</td></tr>
   <tr><td>DELETE</td><td>/tarefas/{id}</td><td>Exclui uma tarefa</td><td>204 No Content / 404 Not Found</td></tr>
 </table>
+
 <h2>⚠️ Exemplos de Erros HTTP</h2>
+<p>A API retorna respostas padronizadas em formato JSON, com códigos de status HTTP apropriados.</p>
+
+<table>
+  <tr><th>Código</th><th>Mensagem</th><th>Descrição</th></tr>
+  <tr><td>400</td><td>Bad Request</td><td>Os dados enviados na requisição estão inválidos ou incompletos.</td></tr>
+  <tr><td>401</td><td>Unauthorized</td><td>Usuário não autenticado ou token inválido (caso seja implementado).</td></tr>
+  <tr><td>404</td><td>Not Found</td><td>O recurso solicitado não foi encontrado no servidor.</td></tr>
+  <tr><td>409</td><td>Conflict</td><td>Conflito ao criar ou atualizar um registro já existente.</td></tr>
+  <tr><td>500</td><td>Internal Server Error</td><td>Erro interno inesperado no servidor.</td></tr>
+</table>
+
+<hr>
 
 <h2>🧰 Como Executar o Projeto Localmente</h2>
-
+<ol>
+  <li>Certifique-se de ter o <strong>Java 17</strong> e o <strong>Maven</strong> instalados em seu sistema.</li>
+  <li>Clone o repositório do projeto:
+    <pre><code>git clone https://github.com/seuusuario/florescer-api.git</code></pre>
+  </li>
+  <li>Entre na pasta do projeto:
+    <pre><code>cd florescer-api</code></pre>
+  </li>
+  <li>Crie um arquivo <strong>.env</strong> na raiz do projeto com as variáveis de ambiente necessárias:
+    <pre><code>DB_URL=jdbc:postgresql://localhost:5432/florescer
+DB_USERNAME=seu_usuario
+DB_PASSWORD=sua_senha
+</code></pre>
+  </li>
+  <li>Execute o projeto:
+    <pre><code>mvn spring-boot:run</code></pre>
+  </li>
+  <li>Acesse a API em:
+    <pre><code>http://localhost:8080</code></pre>
+  </li>
+</ol>
 <h2>🧠 Outros Conteúdos Relevantes</h2>
