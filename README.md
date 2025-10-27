@@ -140,33 +140,6 @@ N:1 com Hábito</p>
 <hr>
 
 <h2>🧰 Como Executar o Projeto Localmente</h2>
-<ol>
-  <li>Instale <strong>Java 17</strong> e <strong>Maven</strong>.</li>
-  <li>Clone o repositório:
-    <pre><code>git clone https://github.com/seuusuario/florescer-api.git</code></pre>
-  </li>
-  <li>Entre na pasta:
-    <pre><code>cd florescer-api</code></pre>
-  </li>
-  <li>Crie um arquivo <strong>.env</strong> na raiz com variáveis de ambiente:
-    <pre><code>DB_URL=jdbc:postgresql://localhost:5432/florescer
-DB_USERNAME=seu_usuario
-DB_PASSWORD=sua_senha
-    </code></pre>
-  </li>
-  <li>Execute o projeto:
-    <pre><code>mvn spring-boot:run</code></pre>
-  </li>
-  <li>Acesse a API em:
-    <pre><code>http://localhost:8080</code></pre>
-  </li>
-</ol>
-
-<hr>
 
 <h2>🧠 Outros Conteúdos Relevantes</h2>
-<ul>
-  <li>Cache configurável para otimizar a listagem de hábitos.</li>
-  <li>Filtros avançados para hábitos e tarefas (status, categoria, data).</li>
-  <li>Histórico de conclusão de hábitos e tarefas, permitindo análises futuras.</li>
-</ul>
+
