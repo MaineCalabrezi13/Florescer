@@ -128,7 +128,7 @@ N:1 com Hábito</p>
 <hr>
 
 <h2>⚠️ Exemplos de Erros HTTP</h2>
-<table>
+<!--<table>
   <tr><th>Código</th><th>Mensagem</th><th>Descrição</th></tr>
   <tr><td>400</td><td>Bad Request</td><td>Dados inválidos ou incompletos</td></tr>
   <tr><td>401</td><td>Unauthorized</td><td>Usuário não autenticado ou token inválido</td></tr>
