@@ -13,7 +13,11 @@ public class Tarefa {
     private String titulo;
     private String descricao;
     private LocalDateTime dataHora;
-    private boolean concluida;
+    private boolean concluida = false;
+
+    @ManyToOne
+    @JoinColumn(name = "habito_id")
+    private Habito habito;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
@@ -60,6 +64,14 @@ public class Tarefa {
         this.concluida = concluida;
     }
 
+    public Habito getHabito() {
+        return habito;
+    }
+
+    public void setHabito(Habito habito) {
+        this.habito = habito;
+    }
+
     public Usuario getUsuario() {
         return usuario;
     }
@@ -67,5 +79,4 @@ public class Tarefa {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-
 }
