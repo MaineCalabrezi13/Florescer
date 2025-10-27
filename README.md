@@ -115,14 +115,50 @@ N:1 com Hábito</p>
   <tr><td>DELETE</td><td>/habitos/{id}</td><td>Remover hábito</td><td>204 / 404</td></tr>
 </table>
 
-<h3>✅ Tarefa</h3>
+<h3>✅ Tarefas</h3>
 <table>
-  <tr><th>Verbo</th><th>Rota</th><th>Descrição</th><th>Código</th></tr>
-  <tr><td>POST</td><td>/tarefas</td><td>Criar tarefa vinculada a hábito</td><td>201 Created</td></tr>
-  <tr><td>GET</td><td>/tarefas</td><td>Listar tarefas</td><td>200 OK</td></tr>
-  <tr><td>GET</td><td>/tarefas/{id}</td><td>Detalhar tarefa</td><td>200 OK / 404</td></tr>
-  <tr><td>PUT</td><td>/tarefas/{id}</td><td>Atualizar tarefa</td><td>200 OK / 404</td></tr>
-  <tr><td>DELETE</td><td>/tarefas/{id}</td><td>Remover tarefa</td><td>204 / 404</td></tr>
+  <tr>
+    <th>Descrição</th>
+    <th>URI</th>
+    <th>Método HTTP</th>
+    <th>Corpo</th>
+    <th>Resposta Esperada</th>
+  </tr>
+  <tr>
+    <td>Criar tarefa vinculada a hábito</td>
+    <td><code>/tarefas</code></td>
+    <td><code>POST</code></td>
+    <td><code>{ "titulo": "Beber água", "habitoId": 1 }</code></td>
+    <td><code>201 Created</code></td>
+  </tr>
+  <tr>
+    <td>Listar tarefas</td>
+    <td><code>/tarefas</code></td>
+    <td><code>GET</code></td>
+    <td>Vazio</td>
+    <td><code>200 OK</code></td>
+  </tr>
+  <tr>
+    <td>Detalhar tarefa</td>
+    <td><code>/tarefas/{id}</code></td>
+    <td><code>GET</code></td>
+    <td>Vazio</td>
+    <td><code>200 OK / 404</code></td>
+  </tr>
+  <tr>
+    <td>Atualizar tarefa</td>
+    <td><code>/tarefas/{id}</code></td>
+    <td><code>PUT</code></td>
+    <td><code>{ "titulo": "Beber 2L de água" }</code></td>
+    <td><code>200 OK / 404</code></td>
+  </tr>
+  <tr>
+    <td>Remover tarefa</td>
+    <td><code>/tarefas/{id}</code></td>
+    <td><code>DELETE</code></td>
+    <td>Vazio</td>
+    <td><code>204 / 404</code></td>
+  </tr>
 </table>
 
 <hr>
