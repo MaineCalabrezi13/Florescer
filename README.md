@@ -97,23 +97,96 @@ N:1 com Hábito</p>
 
 <h3>👤 Usuário</h3>
 <table>
-  <tr><th>Verbo</th><th>Rota</th><th>Descrição</th><th>Código</th></tr>
-  <tr><td>POST</td><td>/usuarios</td><td>Criar novo usuário</td><td>201 Created</td></tr>
-  <tr><td>GET</td><td>/usuarios</td><td>Listar usuários</td><td>200 OK</td></tr>
-  <tr><td>GET</td><td>/usuarios/{id}</td><td>Detalhar usuário</td><td>200 OK / 404</td></tr>
-  <tr><td>PUT</td><td>/usuarios/{id}</td><td>Atualizar usuário</td><td>200 OK / 404</td></tr>
-  <tr><td>DELETE</td><td>/usuarios/{id}</td><td>Remover usuário</td><td>204 / 404</td></tr>
+  <tr>
+    <th>Descrição</th>
+    <th>URI</th>
+    <th>Método HTTP</th>
+    <th>Corpo</th>
+    <th>Resposta Esperada</th>
+  </tr>
+  <tr>
+    <td>Criar novo usuário</td>
+    <td><code>/usuarios</code></td>
+    <td><code>POST</code></td>
+    <td><code>{ "nome": "João", "email": "joao@email.com", "senha": "123456" }</code></td>
+    <td><code>201 Created</code></td>
+  </tr>
+  <tr>
+    <td>Listar usuários</td>
+    <td><code>/usuarios</code></td>
+    <td><code>GET</code></td>
+    <td>Vazio</td>
+    <td><code>200 OK</code></td>
+  </tr>
+  <tr>
+    <td>Detalhar usuário</td>
+    <td><code>/usuarios/{id}</code></td>
+    <td><code>GET</code></td>
+    <td>Vazio</td>
+    <td><code>200 OK / 404</code></td>
+  </tr>
+  <tr>
+    <td>Atualizar usuário</td>
+    <td><code>/usuarios/{id}</code></td>
+    <td><code>PUT</code></td>
+    <td><code>{ "nome": "João Silva" }</code></td>
+    <td><code>200 OK / 404</code></td>
+  </tr>
+  <tr>
+    <td>Remover usuário</td>
+    <td><code>/usuarios/{id}</code></td>
+    <td><code>DELETE</code></td>
+    <td>Vazio</td>
+    <td><code>204 / 404</code></td>
+  </tr>
 </table>
 
 <h3>🌿 Hábito</h3>
 <table>
-  <tr><th>Verbo</th><th>Rota</th><th>Descrição</th><th>Código</th></tr>
-  <tr><td>POST</td><td>/habitos</td><td>Criar hábito vinculado</td><td>201 Created</td></tr>
-  <tr><td>GET</td><td>/habitos</td><td>Listar hábitos</td><td>200 OK</td></tr>
-  <tr><td>GET</td><td>/habitos/{id}</td><td>Detalhar hábito</td><td>200 OK / 404</td></tr>
-  <tr><td>PUT</td><td>/habitos/{id}</td><td>Atualizar hábito</td><td>200 OK / 404</td></tr>
-  <tr><td>DELETE</td><td>/habitos/{id}</td><td>Remover hábito</td><td>204 / 404</td></tr>
+  <tr>
+    <th>Descrição</th>
+    <th>URI</th>
+    <th>Método HTTP</th>
+    <th>Corpo</th>
+    <th>Resposta Esperada</th>
+  </tr>
+  <tr>
+    <td>Criar hábito vinculado</td>
+    <td><code>/habitos</code></td>
+    <td><code>POST</code></td>
+    <td><code>{ "titulo": "Beber água", "usuarioId": 1 }</code></td>
+    <td><code>201 Created</code></td>
+  </tr>
+  <tr>
+    <td>Listar hábitos</td>
+    <td><code>/habitos</code></td>
+    <td><code>GET</code></td>
+    <td>Vazio</td>
+    <td><code>200 OK</code></td>
+  </tr>
+  <tr>
+    <td>Detalhar hábito</td>
+    <td><code>/habitos/{id}</code></td>
+    <td><code>GET</code></td>
+    <td>Vazio</td>
+    <td><code>200 OK / 404</code></td>
+  </tr>
+  <tr>
+    <td>Atualizar hábito</td>
+    <td><code>/habitos/{id}</code></td>
+    <td><code>PUT</code></td>
+    <td><code>{ "titulo": "Beber 2L de água" }</code></td>
+    <td><code>200 OK / 404</code></td>
+  </tr>
+  <tr>
+    <td>Remover hábito</td>
+    <td><code>/habitos/{id}</code></td>
+    <td><code>DELETE</code></td>
+    <td>Vazio</td>
+    <td><code>204 / 404</code></td>
+  </tr>
 </table>
+
 
 <h3>✅ Tarefas</h3>
 <table>
