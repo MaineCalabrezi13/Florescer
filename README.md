@@ -135,7 +135,7 @@ N:1 com Hábito</p>
   <tr><td>404</td><td>Not Found</td><td>Recurso não encontrado</td></tr>
   <tr><td>409</td><td>Conflict</td><td>Conflito ao criar ou atualizar registro existente</td></tr>
   <tr><td>500</td><td>Internal Server Error</td><td>Erro interno do servidor</td></tr>
-</table>
+</table> --!>
 
 <hr>
 
