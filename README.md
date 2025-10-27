@@ -24,7 +24,7 @@
 
 <h2>💡 Funcionalidades Principais</h2>
 <ul>
-  <li><strong>Cadastro e autenticação de usuários:</strong> Criação de contas e login seguro.</li>
+  <li><strong>Cadastro de usuários:</strong> Criação de contas.</li>
   <li><strong>Gerenciamento de hábitos:</strong> Criar, listar, editar e excluir hábitos; marcar hábitos como concluídos; cache configurável para GET.</li>
   <li><strong>Gerenciamento de tarefas:</strong> Criar tarefas vinculadas a hábitos, definir prioridade, data e status.</li>
   <li><strong>Acompanhamento de progresso:</strong> Percentual de conclusão de hábitos; histórico por período.</li>
