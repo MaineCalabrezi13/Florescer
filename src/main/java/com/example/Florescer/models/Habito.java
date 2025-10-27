@@ -1,6 +1,8 @@
 package com.example.Florescer.models;
 
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 public class Habito {
@@ -12,11 +14,15 @@ public class Habito {
     private String nome;
     private String descricao;
     private String frequencia;
-    private boolean ativo;
+    private boolean ativo = true;
+    private LocalDateTime criadoEm = LocalDateTime.now();
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
+
+    @OneToMany(mappedBy = "habito", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Tarefa> tarefas;
 
     // Getters e Setters
     public Long getId() {
@@ -59,6 +65,14 @@ public class Habito {
         this.ativo = ativo;
     }
 
+    public LocalDateTime getCriadoEm() {
+        return criadoEm;
+    }
+
+    public void setCriadoEm(LocalDateTime criadoEm) {
+        this.criadoEm = criadoEm;
+    }
+
     public Usuario getUsuario() {
         return usuario;
     }
@@ -66,6 +80,13 @@ public class Habito {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-}
 
+    public List<Tarefa> getTarefas() {
+        return tarefas;
+    }
+
+    public void setTarefas(List<Tarefa> tarefas) {
+        this.tarefas = tarefas;
+    }
+}
 
