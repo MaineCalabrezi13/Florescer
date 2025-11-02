@@ -26,7 +26,7 @@
 <ul>
   <li><strong>Cadastro de usuários:</strong> Criação de contas.</li>
   <li><strong>Gerenciamento de hábitos:</strong> Criar, listar, editar e excluir hábitos; marcar hábitos como concluídos; cache configurável para GET.</li>
-  <li><strong>Gerenciamento de tarefas:</strong> Criar tarefas vinculadas a hábitos, definir prioridade, data e status.</li>
+  <li><strong>Gerenciamento de tarefas:</strong> Criar tarefas vinculadas a hábitos, data e status.</li>
   <li><strong>Acompanhamento de progresso:</strong> Percentual de conclusão de hábitos; histórico por período.</li>
   <li><strong>Filtros e ordenação:</strong> Listagem de hábitos por categoria, status ou período; paginação e ordenação.</li>
 </ul>
@@ -107,7 +107,13 @@ N:1 com Hábito</p>
     <td>Criar novo usuário</td>
     <td><code>/usuarios</code></td>
     <td><code>POST</code></td>
-    <td><code>{ "nome": "João", "email": "joao@email.com", "senha": "123456" }</code></td>
+    <td>
+<pre>{
+  "nome": "João",
+  "email": "joao@email.com",
+  "senha": "123456"
+}</pre>
+    </td>
     <td><code>201 Created</code></td>
   </tr>
   <tr>
@@ -122,21 +128,27 @@ N:1 com Hábito</p>
     <td><code>/usuarios/{id}</code></td>
     <td><code>GET</code></td>
     <td>Vazio</td>
-    <td><code>200 OK / 404</code></td>
+    <td><code>200 OK / 404 Not Found</code></td>
   </tr>
   <tr>
     <td>Atualizar usuário</td>
     <td><code>/usuarios/{id}</code></td>
     <td><code>PUT</code></td>
-    <td><code>{ "nome": "João Silva" }</code></td>
-    <td><code>200 OK / 404</code></td>
+    <td>
+<pre>{
+  "nome": "João Silva",
+  "email": "joao@email.com",
+  "senha": "novaSenha123"
+}</pre>
+    </td>
+    <td><code>200 OK / 404 Not Found</code></td>
   </tr>
   <tr>
     <td>Remover usuário</td>
     <td><code>/usuarios/{id}</code></td>
     <td><code>DELETE</code></td>
     <td>Vazio</td>
-    <td><code>204 / 404</code></td>
+    <td><code>204 No Content / 404 Not Found</code></td>
   </tr>
 </table>
 
@@ -150,10 +162,18 @@ N:1 com Hábito</p>
     <th>Resposta Esperada</th>
   </tr>
   <tr>
-    <td>Criar hábito vinculado</td>
+    <td>Criar hábito vinculado a usuário</td>
     <td><code>/habitos</code></td>
     <td><code>POST</code></td>
-    <td><code>{ "titulo": "Beber água", "usuarioId": 1 }</code></td>
+    <td>
+<pre>{
+  "nome": "Beber água",
+  "descricao": "Beber 2 litros diariamente",
+  "frequencia": "Diário",
+  "ativo": true,
+  "usuarioId": 1
+}</pre>
+    </td>
     <td><code>201 Created</code></td>
   </tr>
   <tr>
@@ -168,26 +188,32 @@ N:1 com Hábito</p>
     <td><code>/habitos/{id}</code></td>
     <td><code>GET</code></td>
     <td>Vazio</td>
-    <td><code>200 OK / 404</code></td>
+    <td><code>200 OK / 404 Not Found</code></td>
   </tr>
   <tr>
     <td>Atualizar hábito</td>
     <td><code>/habitos/{id}</code></td>
     <td><code>PUT</code></td>
-    <td><code>{ "titulo": "Beber 2L de água" }</code></td>
-    <td><code>200 OK / 404</code></td>
+    <td>
+<pre>{
+  "nome": "Beber 2L de água",
+  "descricao": "Beber água suficiente",
+  "frequencia": "Diário",
+  "ativo": true
+}</pre>
+    </td>
+    <td><code>200 OK / 404 Not Found</code></td>
   </tr>
   <tr>
     <td>Remover hábito</td>
     <td><code>/habitos/{id}</code></td>
     <td><code>DELETE</code></td>
     <td>Vazio</td>
-    <td><code>204 / 404</code></td>
+    <td><code>204 No Content / 404 Not Found</code></td>
   </tr>
 </table>
 
-
-<h3>✅ Tarefas</h3>
+<h3>✅ Tarefa</h3>
 <table>
   <tr>
     <th>Descrição</th>
@@ -200,7 +226,15 @@ N:1 com Hábito</p>
     <td>Criar tarefa vinculada a hábito</td>
     <td><code>/tarefas</code></td>
     <td><code>POST</code></td>
-    <td><code>{ "titulo": "Beber água", "habitoId": 1 }</code></td>
+    <td>
+<pre>{
+  "titulo": "Beber água",
+  "descricao": "Beber 2 litros durante o dia",
+  "dataHora": "2025-11-02T08:00:00",
+  "concluida": false,
+  "habitoId": 1
+}</pre>
+    </td>
     <td><code>201 Created</code></td>
   </tr>
   <tr>
@@ -215,25 +249,30 @@ N:1 com Hábito</p>
     <td><code>/tarefas/{id}</code></td>
     <td><code>GET</code></td>
     <td>Vazio</td>
-    <td><code>200 OK / 404</code></td>
+    <td><code>200 OK / 404 Not Found</code></td>
   </tr>
   <tr>
     <td>Atualizar tarefa</td>
     <td><code>/tarefas/{id}</code></td>
     <td><code>PUT</code></td>
-    <td><code>{ "titulo": "Beber 2L de água" }</code></td>
-    <td><code>200 OK / 404</code></td>
+    <td>
+<pre>{
+  "titulo": "Beber 2L de água",
+  "descricao": "Beber água suficiente",
+  "dataHora": "2025-11-02T08:00:00",
+  "concluida": true
+}</pre>
+    </td>
+    <td><code>200 OK / 404 Not Found</code></td>
   </tr>
   <tr>
     <td>Remover tarefa</td>
     <td><code>/tarefas/{id}</code></td>
     <td><code>DELETE</code></td>
     <td>Vazio</td>
-    <td><code>204 / 404</code></td>
+    <td><code>204 No Content / 404 Not Found</code></td>
   </tr>
 </table>
-
-<hr>
 
 <h2>⚠️ Exemplos de Erros HTTP</h2>
 <table>
