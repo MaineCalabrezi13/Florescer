@@ -94,8 +94,6 @@ N:1 com Hábito</p>
 
 <h2>🚀 Rotas da API</h2>
 
-<h2>🚀 Rotas da API</h2>
-
 <h3>👤 Usuário</h3>
 <table>
   <tr>
@@ -109,7 +107,13 @@ N:1 com Hábito</p>
     <td>Criar novo usuário</td>
     <td><code>/usuarios</code></td>
     <td><code>POST</code></td>
-    <td>JSON com campos obrigatórios</td>
+    <td>
+<pre>{
+  "nome": "João",
+  "email": "joao@email.com",
+  "senha": "123456"
+}</pre>
+    </td>
     <td><code>201 Created</code></td>
   </tr>
   <tr>
@@ -130,7 +134,13 @@ N:1 com Hábito</p>
     <td>Atualizar usuário</td>
     <td><code>/usuarios/{id}</code></td>
     <td><code>PUT</code></td>
-    <td>JSON com campos para atualização</td>
+    <td>
+<pre>{
+  "nome": "João Silva",
+  "email": "joao@email.com",
+  "senha": "novaSenha123"
+}</pre>
+    </td>
     <td><code>200 OK / 404 Not Found</code></td>
   </tr>
   <tr>
@@ -155,7 +165,15 @@ N:1 com Hábito</p>
     <td>Criar hábito vinculado a usuário</td>
     <td><code>/habitos</code></td>
     <td><code>POST</code></td>
-    <td>JSON com campos obrigatórios</td>
+    <td>
+<pre>{
+  "nome": "Beber água",
+  "descricao": "Beber 2 litros diariamente",
+  "frequencia": "Diário",
+  "ativo": true,
+  "usuarioId": 1
+}</pre>
+    </td>
     <td><code>201 Created</code></td>
   </tr>
   <tr>
@@ -176,7 +194,14 @@ N:1 com Hábito</p>
     <td>Atualizar hábito</td>
     <td><code>/habitos/{id}</code></td>
     <td><code>PUT</code></td>
-    <td>JSON com campos para atualização</td>
+    <td>
+<pre>{
+  "nome": "Beber 2L de água",
+  "descricao": "Beber água suficiente",
+  "frequencia": "Diário",
+  "ativo": true
+}</pre>
+    </td>
     <td><code>200 OK / 404 Not Found</code></td>
   </tr>
   <tr>
@@ -201,7 +226,15 @@ N:1 com Hábito</p>
     <td>Criar tarefa vinculada a hábito</td>
     <td><code>/tarefas</code></td>
     <td><code>POST</code></td>
-    <td>JSON com campos obrigatórios</td>
+    <td>
+<pre>{
+  "titulo": "Beber água",
+  "descricao": "Beber 2 litros durante o dia",
+  "dataHora": "2025-11-02T08:00:00",
+  "concluida": false,
+  "habitoId": 1
+}</pre>
+    </td>
     <td><code>201 Created</code></td>
   </tr>
   <tr>
@@ -222,7 +255,14 @@ N:1 com Hábito</p>
     <td>Atualizar tarefa</td>
     <td><code>/tarefas/{id}</code></td>
     <td><code>PUT</code></td>
-    <td>JSON com campos para atualização</td>
+    <td>
+<pre>{
+  "titulo": "Beber 2L de água",
+  "descricao": "Beber água suficiente",
+  "dataHora": "2025-11-02T08:00:00",
+  "concluida": true
+}</pre>
+    </td>
     <td><code>200 OK / 404 Not Found</code></td>
   </tr>
   <tr>
