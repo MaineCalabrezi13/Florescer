@@ -55,24 +55,23 @@
 <h3>👤 Usuário</h3>
 <table>
   <tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr>
-  <tr><td>id</td><td>int</td><td>Identificador único do usuário</td></tr>
-  <tr><td>nome</td><td>string</td><td>Nome completo</td></tr>
-  <tr><td>email</td><td>string</td><td>E-mail para login</td></tr>
-  <tr><td>senha</td><td>string</td><td>Senha criptografada</td></tr>
-  <tr><td>criado_em</td><td>datetime</td><td>Data de criação do cadastro</td></tr>
+  <tr><td>id</td><td>Long</td><td>Identificador único do usuário</td></tr>
+  <tr><td>nome</td><td>String</td><td>Nome completo do usuário</td></tr>
+  <tr><td>email</td><td>String</td><td>E-mail para login</td></tr>
+  <tr><td>senha</td><td>String</td><td>Senha do usuário</td></tr>
 </table>
 <p><strong>Relacionamentos:</strong><br>
-1:N com Hábito<br>
-1:N com Tarefa</p>
+1:N com Hábito</p>
 
 <h3>🌿 Hábito</h3>
 <table>
   <tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr>
-  <tr><td>id</td><td>int</td><td>Identificador único</td></tr>
-  <tr><td>usuario_id</td><td>int</td><td>ID do usuário responsável</td></tr>
-  <tr><td>nome</td><td>string</td><td>Nome do hábito</td></tr>
-  <tr><td>descricao</td><td>string</td><td>Breve descrição</td></tr>
-  <tr><td>frequencia</td><td>string</td><td>Periodicidade (diário, semanal, etc.)</td></tr>
+  <tr><td>id</td><td>Long</td><td>Identificador único do hábito</td></tr>
+  <tr><td>usuarioId</td><td>Long</td><td>ID do usuário responsável pelo hábito</td></tr>
+  <tr><td>nome</td><td>String</td><td>Nome do hábito</td></tr>
+  <tr><td>descricao</td><td>String</td><td>Breve descrição do hábito</td></tr>
+  <tr><td>frequencia</td><td>String</td><td>Periodicidade (diário, semanal, etc.)</td></tr>
+  <tr><td>ativo</td><td>boolean</td><td>Indica se o hábito está ativo</td></tr>
 </table>
 <p><strong>Relacionamentos:</strong><br>
 N:1 com Usuário<br>
@@ -81,12 +80,12 @@ N:1 com Usuário<br>
 <h3>✅ Tarefa</h3>
 <table>
   <tr><th>Campo</th><th>Tipo</th><th>Descrição</th></tr>
-  <tr><td>id</td><td>int</td><td>Identificador único</td></tr>
-  <tr><td>habito_id</td><td>int</td><td>ID do hábito vinculado</td></tr>
-  <tr><td>titulo</td><td>string</td><td>Título da tarefa</td></tr>
-  <tr><td>descricao</td><td>string</td><td>Descrição detalhada</td></tr>
-  <tr><td>data</td><td>date</td><td>Data de execução</td></tr>
-  <tr><td>status</td><td>boolean</td><td>Define se foi concluída</td></tr>
+  <tr><td>id</td><td>Long</td><td>Identificador único da tarefa</td></tr>
+  <tr><td>habitoId</td><td>Long</td><td>ID do hábito vinculado</td></tr>
+  <tr><td>titulo</td><td>String</td><td>Título da tarefa</td></tr>
+  <tr><td>descricao</td><td>String</td><td>Descrição detalhada da tarefa</td></tr>
+  <tr><td>dataHora</td><td>LocalDateTime</td><td>Data e hora de execução da tarefa</td></tr>
+  <tr><td>concluida</td><td>boolean</td><td>Define se a tarefa foi concluída</td></tr>
 </table>
 <p><strong>Relacionamentos:</strong><br>
 N:1 com Hábito</p>
