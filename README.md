@@ -288,6 +288,21 @@ N:1 com Hábito</p>
 <hr>
 
 <h2>🧰 Como Executar o Projeto Localmente</h2>
+<ol>
+  <li><strong>Clonar repositório:</strong>
+    <ul>
+      <li>Execute no terminal:
+        <code>git clone https://github.com/SEU_USUARIO/Florescer.git</code>
+      </li>
+      <li>Entre na pasta do projeto:
+        <code>cd Florescer</code>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Importar projeto:</strong> Abra a pasta do projeto na IDE como Maven Project</li>
+  <li><strong>Rodar backend:</strong> Execute <code>FlorescerApplication.java</code> ou use <code>mvn spring-boot:run</code></li>
+  <li><strong>Testar API:</strong> Disponível em <code>http://localhost:8080</code></li>
+</ol>
 
 <h2>🧠 Outros Conteúdos Relevantes</h2>
 <h3>🃏 Carta-Desafio – Implementação do Cache</h3>
