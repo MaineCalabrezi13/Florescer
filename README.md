@@ -15,7 +15,7 @@
 <ul>
   <li>Java 17</li>
   <li>Spring Boot</li>
-  <li>H2 Database (ou PostgreSQL/MySQL)</li>
+  <li>H2 Database</li>
   <li>Insomnia (teste de API)</li>
   <li>GitHub</li>
 </ul>
