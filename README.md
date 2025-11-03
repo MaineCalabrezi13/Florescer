@@ -17,7 +17,7 @@
   <li>Spring Boot</li>
   <li>H2 Database (ou PostgreSQL/MySQL)</li>
   <li>Insomnia (teste de API)</li>
-  <li>GitHub (controle de versão)</li>
+  <li>GitHub</li>
 </ul>
 
 <hr>
