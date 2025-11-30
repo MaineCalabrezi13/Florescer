@@ -320,18 +320,7 @@ N:1 com Hábito</p>
   </tr>
 
 </table>
-
-
-
-<h2>⚠️ Exemplos de Erros HTTP</h2>
-<table>
-  <tr><th>Código</th><th>Mensagem</th><th>Descrição</th></tr>
-  <tr><td>400</td><td>Bad Request</td><td>Dados inválidos ou incompletos</td></tr>
-  <tr><td>401</td><td>Unauthorized</td><td>Usuário não autenticado ou token inválido</td></tr>
-  <tr><td>404</td><td>Not Found</td><td>Recurso não encontrado</td></tr>
-  <tr><td>409</td><td>Conflict</td><td>Conflito ao criar ou atualizar registro existente</td></tr>
-  <tr><td>500</td><td>Internal Server Error</td><td>Erro interno do servidor</td></tr>
-</table> 
+ 
 
 <hr>
 
