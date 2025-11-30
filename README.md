@@ -126,7 +126,67 @@ N:1 com Hábito</p>
 
 <h2>🛣️Rotas API</h2>
 
-<h3>👤 Usuário</h3> <table> <tr> <th>Descrição</th> <th>URI</th> <th>Método HTTP</th> <th>Corpo</th> <th>Resposta Esperada</th> </tr> <tr> <td>Criar novo usuário</td> <td><code>/usuarios</code></td> <td><code>POST</code></td> <td> <pre>{ "nome": "João", "email": "joao@email.com", "senha": "123456" }</pre> </td> <td><code>201 Created</code></td> </tr> <tr> <td>Listar usuários</td> <td><code>/usuarios</code></td> <td><code>GET</code></td> <td>Vazio</td> <td><code>200 OK</code></td> </tr> <tr> <td>Detalhar usuário</td> <td><code>/usuarios/{id}</code></td> <td><code>GET</code></td> <td>Vazio</td> <td><code>200 OK / 404 Not Found</code></td> </tr> <tr> <td>Atualizar usuário</td> <td><code>/usuarios/{id}</code></td> <td><code>PUT</code></td> <td> <pre>{ "nome": "João Silva", "email": "joao@email.com", "senha": "novaSenha123" }</pre> </td> <td><code>200 OK / 404 Not Found</code></td> </tr> <tr> <td>Remover usuário</td> <td><code>/usuarios/{id}</code></td> <td><code>DELETE</code></td> <td>Vazio</td> <td><code>204 No Content / 404 Not Found</code></td> </tr> </table>
+<h3>👤 Usuário</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th>URI</th>
+      <th>Método HTTP</th>
+      <th>Corpo</th>
+      <th>Resposta Esperada</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Criar novo usuário</td>
+      <td><code>/usuarios</code></td>
+      <td><code>POST</code></td>
+      <td>
+<pre>{
+  "nome": "João",
+  "email": "joao@email.com",
+  "senha": "123456"
+}</pre>
+      </td>
+      <td><code>201 Created</code></td>
+    </tr>
+    <tr>
+      <td>Listar usuários</td>
+      <td><code>/usuarios</code></td>
+      <td><code>GET</code></td>
+      <td>Vazio</td>
+      <td><code>200 OK</code></td>
+    </tr>
+    <tr>
+      <td>Detalhar usuário</td>
+      <td><code>/usuarios/{id}</code></td>
+      <td><code>GET</code></td>
+      <td>Vazio</td>
+      <td><code>200 OK / 404 Not Found</code></td>
+    </tr>
+    <tr>
+      <td>Atualizar usuário</td>
+      <td><code>/usuarios/{id}</code></td>
+      <td><code>PUT</code></td>
+      <td>
+<pre>{
+  "nome": "João Silva",
+  "email": "joao@email.com",
+  "senha": "novaSenha123"
+}</pre>
+      </td>
+      <td><code>200 OK / 404 Not Found</code></td>
+    </tr>
+    <tr>
+      <td>Remover usuário</td>
+      <td><code>/usuarios/{id}</code></td>
+      <td><code>DELETE</code></td>
+      <td>Vazio</td>
+      <td><code>204 No Content / 404 Not Found</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <h3>🌿 Hábito</h3>
 
@@ -318,5 +378,6 @@ N:1 com Hábito</p>
 
 <h2>🃏 Carta-Desafio – Implementação do Cache</h2>
 <p>O projeto Florescer implementa um sistema de cache para otimizar o desempenho das requisições de listagem (GET) e reduzir o tempo de resposta ao acessar dados que não mudam com frequência. O cache foi aplicado principalmente na entidade Hábito, já que é uma das rotas mais consultadas no sistema, responsável por armazenar informações sobre os hábitos cadastrados pelos usuários.</p>
+
 
 
