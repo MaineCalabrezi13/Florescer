@@ -213,7 +213,8 @@ N:1 com Hábito</p>
   </tr>
 </table>
 
-<h3>✅ Tarefa</h3>
+<h3>✅ Tarefas</h3>
+
 <table>
   <tr>
     <th>Descrição</th>
@@ -222,28 +223,37 @@ N:1 com Hábito</p>
     <th>Corpo</th>
     <th>Resposta Esperada</th>
   </tr>
+
   <tr>
-    <td>Criar tarefa vinculada a hábito</td>
-    <td><code>/tarefas</code></td>
+    <td>Criar tarefa vinculada a um hábito</td>
+    <td><code>/tarefas?habitoId=1</code></td>
     <td><code>POST</code></td>
     <td>
 <pre>{
   "titulo": "Beber água",
   "descricao": "Beber 2 litros durante o dia",
   "dataHora": "2025-11-02T08:00:00",
-  "concluida": false,
-  "habitoId": 1
+  "concluida": false
 }</pre>
     </td>
-    <td><code>201 Created</code></td>
-  </tr>
-  <tr>
-    <td>Listar tarefas</td>
-    <td><code>/tarefas</code></td>
-    <td><code>GET</code></td>
-    <td>Vazio</td>
     <td><code>200 OK</code></td>
   </tr>
+
+  <tr>
+    <td>Listar tarefas (com filtros, paginação e ordenação)</td>
+    <td><code>/tarefas</code></td>
+    <td><code>GET</code></td>
+    <td>
+      Parâmetros opcionais:<br>
+      <code>?habitoId=1</code><br>
+      <code>?concluida=true</code><br>
+      <code>?startDate=2025-10-01T00:00:00</code><br>
+      <code>?endDate=2025-11-01T23:59:00</code><br>
+      <code>?page=0&amp;size=10&amp;sort=dataHora,asc</code>
+    </td>
+    <td><code>200 OK</code></td>
+  </tr>
+
   <tr>
     <td>Detalhar tarefa</td>
     <td><code>/tarefas/{id}</code></td>
@@ -251,6 +261,7 @@ N:1 com Hábito</p>
     <td>Vazio</td>
     <td><code>200 OK / 404 Not Found</code></td>
   </tr>
+
   <tr>
     <td>Atualizar tarefa</td>
     <td><code>/tarefas/{id}</code></td>
@@ -265,6 +276,7 @@ N:1 com Hábito</p>
     </td>
     <td><code>200 OK / 404 Not Found</code></td>
   </tr>
+
   <tr>
     <td>Remover tarefa</td>
     <td><code>/tarefas/{id}</code></td>
@@ -272,7 +284,25 @@ N:1 com Hábito</p>
     <td>Vazio</td>
     <td><code>204 No Content / 404 Not Found</code></td>
   </tr>
+
+  <tr>
+    <td>Marcar tarefa como concluída</td>
+    <td><code>/tarefas/{id}/concluir</code></td>
+    <td><code>PUT</code></td>
+    <td>Vazio</td>
+    <td><code>200 OK / 404 Not Found</code></td>
+  </tr>
+
+  <tr>
+    <td>Marcar tarefa como NÃO concluída</td>
+    <td><code>/tarefas/{id}/desconcluir</code></td>
+    <td><code>PUT</code></td>
+    <td>Vazio</td>
+    <td><code>200 OK / 404 Not Found</code></td>
+  </tr>
+
 </table>
+
 
 
 <h2>⚠️ Exemplos de Erros HTTP</h2>
