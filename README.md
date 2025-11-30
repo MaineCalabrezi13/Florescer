@@ -25,10 +25,10 @@
 <h2>💡 Funcionalidades Principais</h2>
 <ul>
   <li><strong>Cadastro de usuários:</strong> Criação de contas.</li>
-  <li><strong>Gerenciamento de hábitos:</strong> Criar, listar, editar e excluir hábitos; marcar hábitos como concluídos; cache configurável para GET.</li>
-  <li><strong>Gerenciamento de tarefas:</strong> Criar tarefas vinculadas a hábitos, data e status.</li>
-  <li><strong>Acompanhamento de progresso:</strong> Percentual de conclusão de hábitos; histórico por período.</li>
-  <li><strong>Filtros e ordenação:</strong> Listagem de hábitos por categoria, status ou período; paginação e ordenação.</li>
+  <li><strong>Gerenciamento de hábitos:</strong> Criar, listar (com filtro por nome), editar e excluir hábitos.</li>
+  <li><strong>Gerenciamento de tarefas:</strong> Criar tarefas vinculadas a hábitos, listar com filtros (hábito, status e período), atualizar, concluir e desconcluir tarefas.</li>
+  <li><strong>Acompanhamento de progresso:</strong> Percentual de conclusão de hábitos através da rota <code>/habitos/{id}/progresso</code>.</li>
+  <li><strong>Filtros e ordenação:</strong> Paginação e ordenação disponíveis nas listagens de hábitos e tarefas.</li>
 </ul>
 
 <hr>
@@ -36,14 +36,45 @@
 <h2>📊 Mapeamento das Funcionalidades</h2>
 <table>
   <tr><th>Funcionalidade</th><th>Descrição</th><th>Entidades Envolvidas</th></tr>
-  <tr><td>Cadastro de Usuário</td><td>Criar um novo usuário</td><td>Usuário</td></tr>
-  <tr><td>Criação de Hábito</td><td>Registrar um novo hábito</td><td>Usuário, Hábito</td></tr>
-  <tr><td>Registro de Tarefa</td><td>Criar tarefas vinculadas a hábitos</td><td>Hábito, Tarefa</td></tr>
-  <tr><td>Listagem e Acompanhamento</td><td>Visualizar todos hábitos e tarefas</td><td>Hábito, Tarefa</td></tr>
-  <tr><td>Edição e Exclusão</td><td>Atualizar ou remover hábitos e tarefas</td><td>Todas</td></tr>
+  <tr>
+    <td>Cadastro de Usuário</td>
+    <td>Criar, atualizar e remover usuários do sistema</td>
+    <td>Usuario</td>
+  </tr>
+  <tr>
+    <td>Criação de Hábito</td>
+    <td>Registrar novos hábitos vinculados a um usuário</td>
+    <td>Usuario, Habito</td>
+  </tr>
+  <tr>
+    <td>Registro de Tarefa</td>
+    <td>Criar tarefas vinculadas a hábitos, com data e status de conclusão</td>
+    <td>Habito, Tarefa</td>
+  </tr>
+  <tr>
+    <td>Listagem e Filtros</td>
+    <td>Visualizar hábitos e tarefas com paginação, ordenação e filtros (por nome, status ou período)</td>
+    <td>Habito, Tarefa</td>
+  </tr>
+  <tr>
+    <td>Edição e Exclusão</td>
+    <td>Atualizar ou remover hábitos e tarefas existentes</td>
+    <td>Habito, Tarefa</td>
+  </tr>
+  <tr>
+    <td>Concluir/Desconcluir Tarefa</td>
+    <td>Marcar tarefas como concluídas ou reverter o status</td>
+    <td>Tarefa</td>
+  </tr>
+  <tr>
+    <td>Acompanhamento de Progresso</td>
+    <td>Calcular percentual de conclusão das tarefas de cada hábito</td>
+    <td>Habito, Tarefa</td>
+  </tr>
 </table>
 
 <hr>
+
 
 <h2>⚙️ Limitações do Projeto</h2>
 <p>Nesta versão, a API não possui autenticação JWT nem integração com frontend. Foca apenas em cadastro, acompanhamento e organização de hábitos e tarefas.</p>
