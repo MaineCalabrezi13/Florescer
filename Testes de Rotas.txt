@@ -1,0 +1,97 @@
+👤 Usuário
+Cadastrar usuário
+POST /usuários
+{
+  "nome": "João",
+  "email": "joao@email.com",
+  "senha": "123456"
+}
+
+Listar usuários
+GET /usuários
+
+Detalhar usuário
+GET /usuarios/{id}
+
+Atualizar usuário
+PUT /usuarios/{id}
+{
+  "nome": "João Silva",
+  "email": "joao@email.com",
+  "senha": "novaSenha123"
+}
+
+Remover usuário
+DELETE /usuarios/{id}
+-----------------------------------------------
+🌿 Hábito
+
+Cadastrar hábito
+POST /hábitos
+
+{
+  "nome": "Beber água",
+  "descricao": "Beber 2 litros diariamente",
+  "frequencia": "Diário",
+  "ativo": true
+}
+
+Listar hábitos
+GET /habitos?page=0&size=10&sort=nome,asc&nome=agua
+
+Detalhar hábito
+GET /habitos/{id}
+
+Atualizar hábito
+PUT /habitos/{id}
+
+{
+  "nome": "Beber 2L de água",
+  "descricao": "Beber água suficiente",
+  "frequencia": "Diário",
+  "ativo": true
+}
+
+Remover hábito
+DELETE /habitos/{id}
+
+Consultar progresso do hábito
+GET /habitos/{id}/progresso
+
+--------------------------------------
+✅ Tarefas
+
+Cadastrar tarefa vinculada a um hábito
+POST /tarefas?habitoId=1
+
+{
+  "titulo": "Beber água",
+  "descricao": "Beber 2 litros durante o dia",
+  "dataHora": "2025-11-02T08:00:00",
+  "concluida": false
+}
+
+Listar tarefas
+GET /tarefas?habitoId=1&concluida=false&startDate=2025-10-01T00:00:00&endDate=2025-11-01T23:59:00&page=0&size=10&sort=dataHora,asc
+
+Detalhar tarefa
+GET /tarefas/{id}
+
+Atualizar tarefa
+PUT /tarefas/{id}
+
+{
+  "titulo": "Beber 2L de água",
+  "descricao": "Beber água suficiente",
+  "dataHora": "2025-11-02T08:00:00",
+  "concluida": true
+}
+
+Remover tarefa
+DELETE /tarefas/{id}
+
+Marcar tarefa como concluída
+PUT /tarefas/{id}/concluir
+
+Marcar tarefa como NÃO concluída
+PUT /tarefas/{id}/desconcluir
