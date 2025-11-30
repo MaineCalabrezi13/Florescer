@@ -359,7 +359,7 @@ N:1 com Hábito</p>
 <ol>
   <li>Certifique-se de ter Java e Maven instalados.</li>
   <li>Clone o repositório:
-    <pre>git clone https://github.com/seu-usuario/seu-projeto.git</pre>
+    <pre>git clone https://github.com/seu-usuario/Florescer</pre>
   </li>
   <li>Entre na pasta do projeto:
     <pre>cd seu-projeto</pre>
