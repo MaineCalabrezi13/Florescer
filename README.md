@@ -316,7 +316,7 @@ N:1 com Hábito</p>
 </ol>
 
 
-<h2>🧠 Outros Conteúdos Relevantes</h2>
-<h3>🃏 Carta-Desafio – Implementação do Cache</h3>
+<h2>🃏 Carta-Desafio – Implementação do Cache</h2>
 <p>O projeto Florescer implementa um sistema de cache para otimizar o desempenho das requisições de listagem (GET) e reduzir o tempo de resposta ao acessar dados que não mudam com frequência. O cache foi aplicado principalmente na entidade Hábito, já que é uma das rotas mais consultadas no sistema, responsável por armazenar informações sobre os hábitos cadastrados pelos usuários.</p>
+
 
