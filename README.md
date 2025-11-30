@@ -153,6 +153,7 @@ N:1 com Hábito</p>
 </table>
 
 <h3>🌿 Hábito</h3>
+
 <table>
   <tr>
     <th>Descrição</th>
@@ -161,8 +162,9 @@ N:1 com Hábito</p>
     <th>Corpo</th>
     <th>Resposta Esperada</th>
   </tr>
+
   <tr>
-    <td>Criar hábito vinculado a usuário</td>
+    <td>Criar hábito</td>
     <td><code>/habitos</code></td>
     <td><code>POST</code></td>
     <td>
@@ -170,19 +172,24 @@ N:1 com Hábito</p>
   "nome": "Beber água",
   "descricao": "Beber 2 litros diariamente",
   "frequencia": "Diário",
-  "ativo": true,
-  "usuarioId": 1
+  "ativo": true
 }</pre>
     </td>
-    <td><code>201 Created</code></td>
-  </tr>
-  <tr>
-    <td>Listar hábitos</td>
-    <td><code>/habitos</code></td>
-    <td><code>GET</code></td>
-    <td>Vazio</td>
     <td><code>200 OK</code></td>
   </tr>
+
+  <tr>
+    <td>Listar hábitos (com filtro e paginação)</td>
+    <td><code>/habitos</code></td>
+    <td><code>GET</code></td>
+    <td>
+      Parâmetros opcionais:<br>
+      <code>?nome=agua</code><br>
+      <code>?page=0&amp;size=10&amp;sort=nome,asc</code>
+    </td>
+    <td><code>200 OK</code></td>
+  </tr>
+
   <tr>
     <td>Detalhar hábito</td>
     <td><code>/habitos/{id}</code></td>
@@ -190,6 +197,7 @@ N:1 com Hábito</p>
     <td>Vazio</td>
     <td><code>200 OK / 404 Not Found</code></td>
   </tr>
+
   <tr>
     <td>Atualizar hábito</td>
     <td><code>/habitos/{id}</code></td>
@@ -204,6 +212,7 @@ N:1 com Hábito</p>
     </td>
     <td><code>200 OK / 404 Not Found</code></td>
   </tr>
+
   <tr>
     <td>Remover hábito</td>
     <td><code>/habitos/{id}</code></td>
@@ -211,6 +220,15 @@ N:1 com Hábito</p>
     <td>Vazio</td>
     <td><code>204 No Content / 404 Not Found</code></td>
   </tr>
+
+  <tr>
+    <td>Consultar progresso do hábito</td>
+    <td><code>/habitos/{id}/progresso</code></td>
+    <td><code>GET</code></td>
+    <td>Vazio</td>
+    <td><code>200 OK / 404 Not Found</code></td>
+  </tr>
+
 </table>
 
 <h3>✅ Tarefas</h3>
