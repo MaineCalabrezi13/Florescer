@@ -356,8 +356,22 @@ N:1 com Hábito</p>
 <hr>
 
 <h2>🧰 Como Executar o Projeto Localmente</h2>
+<ol>
+  <li>Certifique-se de ter Java e Maven instalados.</li>
+  <li>Clone o repositório:
+    <pre>git clone https://github.com/seu-usuario/seu-projeto.git</pre>
+  </li>
+  <li>Entre na pasta do projeto:
+    <pre>cd seu-projeto</pre>
+  </li>
+  <li>Configure o banco de dados em <code>application.properties</code> ou <code>application.yml</code>.</li>
+  <li>Execute o projeto:
+    <pre>mvn clean spring-boot:run</pre>
+  </li>
+  <li>Acesse a API em <code>http://localhost:8080</code> e teste as rotas com Insomnia ou Postman.</li>
+</ol>
 
 
-<h2>🧠 Outros Conteúdos Relevantes</h2>
-<h3>🃏 Carta-Desafio – Implementação do Cache</h3>
+
+<h2>🃏 Carta-Desafio – Implementação do Cache</h2>
 <p>O projeto Florescer implementa um sistema de cache para otimizar o desempenho das requisições de listagem (GET) e reduzir o tempo de resposta ao acessar dados que não mudam com frequência. O cache foi aplicado principalmente na entidade Hábito, já que é uma das rotas mais consultadas no sistema, responsável por armazenar informações sobre os hábitos cadastrados pelos usuários.</p>
